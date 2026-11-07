@@ -1,116 +1,173 @@
+<div align="center">
 
+# 🎓 GRANTLY
 
-Pasted text(4).txt
-Document
-now can u design readme file for this project  https://grantly-scholarship-compass.vercel.app/
+### Scholarship Compass
 
-Absolutely! Let's create a professional, attractive README.md for your GRANTLY — Scholarship Compass hackathon project.
+**Find Your Future. Fund Your Dreams.**
 
-Since your project is already deployed on Vercel, the README should help someone visiting your GitHub repository understand:
+A student-first platform to discover scholarship opportunities, 
+understand eligibility, and manage your scholarship journey.
 
-What GRANTLY is and what problem it solves.
+<br/>
 
-Its key features and scholarship-matching functionality.
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_GRANTLY-0F766E?style=for-the-badge)](https://grantly-scholarship-compass.vercel.app/)
 
-The technologies used to build it.
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/Jayadaripa/grantly-scholarship-compass)
 
-How to run it locally.
+<br/>
 
-Where to explore the live application.
+<img src="https://img.shields.io/badge/Project-Hackathon-10B981?style=flat-square"/>
+<img src="https://img.shields.io/badge/Focus-Scholarship_Discovery-134E4A?style=flat-square"/>
+<img src="https://img.shields.io/badge/Status-Frontend_Prototype-F59E0B?style=flat-square"/>
 
-What makes it useful for students.
+</div>
 
-I'll make it look like a polished startup project README rather than a basic college-project description. I'll also clearly distinguish demo functionality from real scholarship services.
+---
 
-Your README is ready! 🎉
-README.md
+## 🌱 About GRANTLY
 
-Professional GitHub documentation for GRANTLY
+Finding scholarships shouldn't feel like a scholarship of its own.
 
-Created
-Download README.md
+Students often need to search across different platforms, 
+interpret eligibility rules, and remember deadlines and required documents.
 
-How to add it to your GitHub repository
-Download the README file above.
+**GRANTLY brings these tasks together in one clear, student-friendly experience.**
 
-Open your project folder in VS Code.
+With GRANTLY, students can explore opportunities, review potential eligibility, 
+save scholarships, and keep track of application progress.
 
-Locate the existing README.md in the root directory.
+> Built for students. Designed to make opportunities easier to find.
 
-Replace its contents with the new README.
+---
 
-Save the file.
+## ✨ Features
 
-Then push the changes:
+<table>
+<tr>
+<td width="50%">
 
-git add README.md
-git commit -m "docs: improve project README"
-git push origin main
+### 🔎 Scholarship Discovery
 
-Your GitHub repository will now have a much more polished project description.
+Explore scholarship opportunities in one centralized platform.
 
-One recommendation: Add 2–3 screenshots of GRANTLY to the README, especially the landing page, scholarship matching screen, and dashboard. Screenshots will make your hackathon project stand out to recruiters and other developers.
+### 🎯 Personalized Matching
 
+Compare student profile information with scholarship criteria.
 
-README.md
-Document
-🎓 GRANTLY — Scholarship Compass
-<p align="center"> <strong>Find Your Future. Fund Your Dreams.</strong> <br /> A unified scholarship discovery and management platform designed to help students find opportunities, understand eligibility, and organize their scholarship journey. <br /><br /> <a href="https://grantly-scholarship-compass.vercel.app/"><strong>🌐 Live Demo</strong></a> · <a href="https://github.com/Jayadaripa/grantly-scholarship-compass"><strong>💻 GitHub Repository</strong></a> </p>
-✨ About GRANTLY
-Finding scholarships can be confusing. Students often have to search across multiple websites, interpret eligibility requirements, and keep track of deadlines and documents on their own.
+### 🧾 Eligibility Insights
 
-GRANTLY brings these steps together in one place.
+Understand scholarship requirements and identify details that need verification.
 
-It helps students discover scholarships based on their academic profile, review eligibility criteria, save opportunities, and manage application progress through a clear, student-friendly experience.
+</td>
+<td width="50%">
 
-Project note: GRANTLY is a hackathon frontend prototype. Scholarship entries and some assistant interactions use demo content. The platform does not guarantee eligibility, scholarship awards, or successful application submission.
+### 📌 Save Opportunities
 
-🚀 Live Application
-Explore GRANTLY here:
+Bookmark scholarships and revisit them whenever needed.
 
-https://grantly-scholarship-compass.vercel.app/
+### 📊 Application Tracking
 
-🌟 Key Features
-Scholarship Discovery — Explore scholarship opportunities in a centralized interface.
-Personalized Matching — Compare scholarship criteria with a student's profile using a rule-based matching approach.
-Eligibility Insights — Review requirements and distinguish confirmed matches from details that need verification.
-Search, Filters & Sorting — Find opportunities by relevant scholarship details.
-Saved Scholarships — Bookmark opportunities to revisit later.
-Application Tracking — Organize scholarship applications and monitor their progress.
-Document Checklist — Keep track of documents needed for applications.
-Student Profile — Maintain academic and preference information for more relevant discovery.
-GRANTLY AI Navigator — A scholarship-guide experience with suggested prompts and demo responses.
-Responsive Interface — Designed to work across desktop, tablet, and mobile screens.
-Feature availability may vary by the current deployed prototype.
+Organize scholarships and monitor application progress.
 
-🧭 How It Works
-Build your profile — Add your education and relevant academic details.
-Discover opportunities — Browse scholarships and review potential matches.
-Understand eligibility — Check requirements and identify information that may need verification.
-Stay organized — Save scholarships, track application progress, and manage document checklists.
-🛠️ Tech Stack
-The project is built with a modern frontend stack:
+### 📁 Document Checklist
 
-Technology	Purpose
-React	Component-based user interface
-Vite	Development server and build tooling
-JavaScript	Application logic
-Tailwind CSS	Responsive styling
-React Router	Client-side navigation
-Lucide React	Interface icons
-LocalStorage	Persist selected user data in the browser
-Update this list if your current implementation uses additional libraries or a different persistence approach.
+Keep track of documents required for scholarship applications.
 
-🖥️ Run Locally
-Prerequisites
-Node.js (LTS recommended)
-npm
-Git
-Installation
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+
+### 🤖 GRANTLY AI Navigator
+
+A scholarship-guide experience designed to help students explore scholarship-related topics.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🧭 How It Works
+
+<div align="center">
+
+| 01 · Build Your Profile | 02 · Discover Matches | 03 · Stay Organized |
+|:---:|:---:|:---:|
+| 👩‍🎓 | 🎯 | 📅 |
+| Add your academic details | Explore scholarship opportunities | Track applications and documents |
+
+</div>
+
+---
+
+## 🖥️ Live Application
+
+Explore the deployed application:
+
+<div align="center">
+
+### [🌐 Open GRANTLY](https://grantly-scholarship-compass.vercel.app/)
+
+</div>
+
+<!-- Add screenshots of your actual application here.
+Example:
+
+<p align="center">
+  <img src="docs/screenshots/home.png" width="80%" alt="GRANTLY Homepage"/>
+</p>
+
+-->
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+
+</div>
+
+| Technology | Purpose |
+|---|---|
+| React | Component-based user interface |
+| TypeScript | Type-safe application development |
+| Vite | Development server and build tooling |
+| Tailwind CSS | Responsive styling |
+| React Router | Client-side navigation |
+| Lucide React | Interface icons |
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run GRANTLY locally.
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+
+### Installation
+
+```bash
 # Clone the repository
 git clone https://github.com/Jayadaripa/grantly-scholarship-compass.git
 
-# Move into the project directory
+# Navigate to the project directory
 cd grantly-scholarship-compass
 
 # Install dependencies
@@ -118,59 +175,3 @@ npm install
 
 # Start the development server
 npm run dev
-Open the local URL printed in your terminal (typically http://localhost:5173).
-
-Build for production
-npm run build
-To preview the production build locally:
-
-npm run preview
-📁 Project Structure
-The exact structure may evolve as the project develops. A typical structure for this application is:
-
-grantly-scholarship-compass/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── data/
-│   ├── utils/
-│   ├── App.jsx
-│   └── main.jsx
-├── index.html
-├── package.json
-└── README.md
-🔐 Demo & Data Notes
-Scholarship listings may be sample/demo entries and should not be treated as verified live opportunities.
-Matching percentages are indicators based on available criteria—not a probability of receiving an award.
-Missing or unverified information should be checked against the scholarship provider's official requirements.
-Demo assistant responses do not imply that a live AI model is connected.
-Browser-based persistence, where implemented, is stored locally and is not a secure server-side document storage system.
-Always use the scholarship provider's official website for application submission and final eligibility confirmation.
-💡 Why GRANTLY?
-GRANTLY is built around a simple idea: finding financial assistance for education should not be complicated.
-
-By bringing scholarship discovery, eligibility insights, and application organization into one experience, GRANTLY aims to make the scholarship journey easier to understand and manage.
-
-🔮 Future Improvements
-Potential next steps include:
-
-Connect verified scholarship data sources.
-Add secure backend authentication and student accounts.
-Improve matching with more detailed eligibility rules.
-Add deadline reminders and notifications.
-Support secure document storage.
-Integrate a live AI assistant with reliable scholarship data.
-Add accessibility and usability improvements based on student feedback.
-👩‍💻 Author
-Jaya Daripa
-
-Built as a hackathon project with the goal of making scholarship discovery more approachable for students.
-
-📄 License
-No license has been specified yet. If you plan to make this repository open source, consider adding a license that reflects how you want others to use the project.
-
-
-
-
