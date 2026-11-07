@@ -7,7 +7,7 @@ import type { MatchResult } from "@/lib/match";
 import { actions, useAppState } from "@/lib/store";
 import { Button, Card, Pill, DemoTag } from "./ui";
 
-export function MatchBadge({ m, className }: { m: MatchResult; className?: string }) {
+export function MatchBadge({ m, className }: { m: MatchResult; className?: string | undefined }) {
   if (m.label === "Complete profile") return <Pill tone="muted" className={className}>Build profile to match</Pill>;
   const tone = m.label === "Strong Match" ? "mint" : m.label === "Potential Match" ? "info" : "muted";
   return (
@@ -23,7 +23,7 @@ export function DeadlinePill({ date }: { date: string }) {
   return <Pill tone={d.tone === "soon" ? "warning" : d.tone === "passed" ? "muted" : "success"}>{d.label}</Pill>;
 }
 
-export function SaveButton({ id, className }: { id: string; className?: string }) {
+export function SaveButton({ id, className }: { id: string; className?: string | undefined }) {
   const { saved } = useAppState();
   const isSaved = saved.includes(id);
   return (

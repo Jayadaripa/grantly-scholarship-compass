@@ -34,7 +34,7 @@ export function Card({ className, children }: { className?: string; children: Re
   return <div className={cn("rounded-[18px] border border-border bg-card shadow-soft", className)}>{children}</div>;
 }
 
-export function Pill({ tone = "neutral", children, className }: { tone?: "neutral" | "mint" | "warning" | "info" | "success" | "error" | "muted"; children: ReactNode; className?: string }) {
+export function Pill({ tone = "neutral", children, className }: { tone?: "neutral" | "mint" | "warning" | "info" | "success" | "error" | "muted"; children: ReactNode; className?: string | undefined }) {
   const tones = {
     neutral: "bg-secondary text-foreground",
     mint: "bg-accent text-accent-foreground",
@@ -47,7 +47,7 @@ export function Pill({ tone = "neutral", children, className }: { tone?: "neutra
   return <span className={cn("inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold", tones[tone], className)}>{children}</span>;
 }
 
-export function DemoTag({ className }: { className?: string }) {
+export function DemoTag({ className }: { className?: string | undefined }) {
   return (
     <span className={cn("inline-flex items-center rounded-md border border-dashed border-subtle/60 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground", className)}>
       Demo data

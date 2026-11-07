@@ -33,7 +33,7 @@ function Onboarding() {
   const { profile } = useAppState();
   const [step, setStep] = useState(0);
   const [f, setF] = useState<Profile>(blank);
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<Partial<Record<keyof Profile, string>>>({});
   const navigate = useNavigate();
 
   useEffect(() => { if (profile) setF(profile); }, [profile]);
@@ -41,7 +41,7 @@ function Onboarding() {
   const upd = (k: keyof Profile, v: string | string[]) => { setF((p) => ({ ...p, [k]: v })); setErrors((e) => ({ ...e, [k]: "" })); };
 
   const validate = () => {
-    const e: Record<string, string> = {};
+    const e: Partial<Record<keyof Profile, string>> = {};
     if (step === 0) {
       if (f.fullName.trim().length < 2) e.fullName = "Please enter your full name.";
       if (!/^\S+@\S+\.\S+$/.test(f.email)) e.email = "Enter a valid email address.";
@@ -181,7 +181,7 @@ function Step({ title, text, children }: { title: string; text: string; children
   );
 }
 
-function Field({ label, error, hint, full, children }: { label: string; error?: string; hint?: string; full?: boolean; children: React.ReactNode }) {
+function Field({ label, error, hint, full, children }: { label: string; error?: string | undefined; hint?: string | undefined; full?: boolean | undefined; children: React.ReactNode }) {
   return (
     <label className={cn("block", full && "sm:col-span-2")}>
       <span className="mb-1.5 block text-sm font-medium">{label}</span>
@@ -191,7 +191,7 @@ function Field({ label, error, hint, full, children }: { label: string; error?: 
   );
 }
 
-function Select({ value, onChange, options, labels, placeholder }: { value: string; onChange: (v: string) => void; options: readonly string[]; labels?: Record<string, string>; placeholder: string }) {
+function Select({ value, onChange, options, labels, placeholder }: { value: string; onChange: (v: string) => void; options: readonly string[]; labels?: Record<string, string> | undefined; placeholder: string }) {
   return (
     <select className={cn(inputCls, !value && "text-subtle")} value={value} onChange={(e) => onChange(e.target.value)}>
       <option value="">{placeholder}</option>

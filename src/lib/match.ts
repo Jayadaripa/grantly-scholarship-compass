@@ -92,7 +92,7 @@ export function matchScholarship(s: Scholarship, p: Profile | null): MatchResult
     else c.push({ label: "Gender", status: "fail", detail: "This scholarship is for women students only." });
   }
 
-  const prefHit = s.types.some((t) => p.preferences.includes(TYPE_PREF[t])) ||
+  const prefHit = s.types.some((t) => p.preferences.includes(TYPE_PREF[t] ?? "")) ||
     p.preferences.includes(s.sector === "Government" ? "Government Scholarships" : "Private Scholarships");
 
   const pts = c.reduce((a, x) => a + (x.status === "met" ? 1 : x.status === "verify" ? 0.5 : 0), 0);

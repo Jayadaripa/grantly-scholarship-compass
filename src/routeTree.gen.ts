@@ -10,16 +10,29 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ShellRouteImport } from './routes/_shell'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ShellApplicationsRouteImport } from './routes/_shell.applications'
+import { Route as ShellDashboardRouteImport } from './routes/_shell.dashboard'
+import { Route as ShellDocumentsRouteImport } from './routes/_shell.documents'
+import { Route as ShellExploreRouteImport } from './routes/_shell.explore'
+import { Route as ShellNavigatorRouteImport } from './routes/_shell.navigator'
+import { Route as ShellProfileRouteImport } from './routes/_shell.profile'
+import { Route as ShellSavedRouteImport } from './routes/_shell.saved'
+import { Route as ShellSettingsRouteImport } from './routes/_shell.settings'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShellRoute = ShellRouteImport.update({
+  id: '/_shell',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -52,6 +65,46 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ShellApplicationsRoute = ShellApplicationsRouteImport.update({
+  id: '/applications',
+  path: '/applications',
+  getParentRoute: () => ShellRoute,
+} as any)
+const ShellDashboardRoute = ShellDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => ShellRoute,
+} as any)
+const ShellDocumentsRoute = ShellDocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => ShellRoute,
+} as any)
+const ShellExploreRoute = ShellExploreRouteImport.update({
+  id: '/explore',
+  path: '/explore',
+  getParentRoute: () => ShellRoute,
+} as any)
+const ShellNavigatorRoute = ShellNavigatorRouteImport.update({
+  id: '/navigator',
+  path: '/navigator',
+  getParentRoute: () => ShellRoute,
+} as any)
+const ShellProfileRoute = ShellProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => ShellRoute,
+} as any)
+const ShellSavedRoute = ShellSavedRouteImport.update({
+  id: '/saved',
+  path: '/saved',
+  getParentRoute: () => ShellRoute,
+} as any)
+const ShellSettingsRoute = ShellSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => ShellRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +114,14 @@ export interface FileRoutesByFullPath {
   '/onboarding': typeof OnboardingRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/applications': typeof ShellApplicationsRoute
+  '/dashboard': typeof ShellDashboardRoute
+  '/documents': typeof ShellDocumentsRoute
+  '/explore': typeof ShellExploreRoute
+  '/navigator': typeof ShellNavigatorRoute
+  '/profile': typeof ShellProfileRoute
+  '/saved': typeof ShellSavedRoute
+  '/settings': typeof ShellSettingsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,16 +131,33 @@ export interface FileRoutesByTo {
   '/onboarding': typeof OnboardingRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/applications': typeof ShellApplicationsRoute
+  '/dashboard': typeof ShellDashboardRoute
+  '/documents': typeof ShellDocumentsRoute
+  '/explore': typeof ShellExploreRoute
+  '/navigator': typeof ShellNavigatorRoute
+  '/profile': typeof ShellProfileRoute
+  '/saved': typeof ShellSavedRoute
+  '/settings': typeof ShellSettingsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_shell': typeof ShellRouteWithChildren
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/how-it-works': typeof HowItWorksRoute
   '/onboarding': typeof OnboardingRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/_shell/applications': typeof ShellApplicationsRoute
+  '/_shell/dashboard': typeof ShellDashboardRoute
+  '/_shell/documents': typeof ShellDocumentsRoute
+  '/_shell/explore': typeof ShellExploreRoute
+  '/_shell/navigator': typeof ShellNavigatorRoute
+  '/_shell/profile': typeof ShellProfileRoute
+  '/_shell/saved': typeof ShellSavedRoute
+  '/_shell/settings': typeof ShellSettingsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +169,14 @@ export interface FileRouteTypes {
     | '/onboarding'
     | '/privacy'
     | '/terms'
+    | '/applications'
+    | '/dashboard'
+    | '/documents'
+    | '/explore'
+    | '/navigator'
+    | '/profile'
+    | '/saved'
+    | '/settings'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,19 +186,37 @@ export interface FileRouteTypes {
     | '/onboarding'
     | '/privacy'
     | '/terms'
+    | '/applications'
+    | '/dashboard'
+    | '/documents'
+    | '/explore'
+    | '/navigator'
+    | '/profile'
+    | '/saved'
+    | '/settings'
   id:
     | '__root__'
     | '/'
+    | '/_shell'
     | '/about'
     | '/contact'
     | '/how-it-works'
     | '/onboarding'
     | '/privacy'
     | '/terms'
+    | '/_shell/applications'
+    | '/_shell/dashboard'
+    | '/_shell/documents'
+    | '/_shell/explore'
+    | '/_shell/navigator'
+    | '/_shell/profile'
+    | '/_shell/saved'
+    | '/_shell/settings'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ShellRoute: typeof ShellRouteWithChildren
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   HowItWorksRoute: typeof HowItWorksRoute
@@ -128,6 +232,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_shell': {
+      id: '/_shell'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof ShellRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -172,11 +283,92 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_shell/applications': {
+      id: '/_shell/applications'
+      path: '/applications'
+      fullPath: '/applications'
+      preLoaderRoute: typeof ShellApplicationsRouteImport
+      parentRoute: typeof ShellRoute
+    }
+    '/_shell/dashboard': {
+      id: '/_shell/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof ShellDashboardRouteImport
+      parentRoute: typeof ShellRoute
+    }
+    '/_shell/documents': {
+      id: '/_shell/documents'
+      path: '/documents'
+      fullPath: '/documents'
+      preLoaderRoute: typeof ShellDocumentsRouteImport
+      parentRoute: typeof ShellRoute
+    }
+    '/_shell/explore': {
+      id: '/_shell/explore'
+      path: '/explore'
+      fullPath: '/explore'
+      preLoaderRoute: typeof ShellExploreRouteImport
+      parentRoute: typeof ShellRoute
+    }
+    '/_shell/navigator': {
+      id: '/_shell/navigator'
+      path: '/navigator'
+      fullPath: '/navigator'
+      preLoaderRoute: typeof ShellNavigatorRouteImport
+      parentRoute: typeof ShellRoute
+    }
+    '/_shell/profile': {
+      id: '/_shell/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ShellProfileRouteImport
+      parentRoute: typeof ShellRoute
+    }
+    '/_shell/saved': {
+      id: '/_shell/saved'
+      path: '/saved'
+      fullPath: '/saved'
+      preLoaderRoute: typeof ShellSavedRouteImport
+      parentRoute: typeof ShellRoute
+    }
+    '/_shell/settings': {
+      id: '/_shell/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof ShellSettingsRouteImport
+      parentRoute: typeof ShellRoute
+    }
   }
 }
 
+interface ShellRouteChildren {
+  ShellApplicationsRoute: typeof ShellApplicationsRoute
+  ShellDashboardRoute: typeof ShellDashboardRoute
+  ShellDocumentsRoute: typeof ShellDocumentsRoute
+  ShellExploreRoute: typeof ShellExploreRoute
+  ShellNavigatorRoute: typeof ShellNavigatorRoute
+  ShellProfileRoute: typeof ShellProfileRoute
+  ShellSavedRoute: typeof ShellSavedRoute
+  ShellSettingsRoute: typeof ShellSettingsRoute
+}
+
+const ShellRouteChildren: ShellRouteChildren = {
+  ShellApplicationsRoute: ShellApplicationsRoute,
+  ShellDashboardRoute: ShellDashboardRoute,
+  ShellDocumentsRoute: ShellDocumentsRoute,
+  ShellExploreRoute: ShellExploreRoute,
+  ShellNavigatorRoute: ShellNavigatorRoute,
+  ShellProfileRoute: ShellProfileRoute,
+  ShellSavedRoute: ShellSavedRoute,
+  ShellSettingsRoute: ShellSettingsRoute,
+}
+
+const ShellRouteWithChildren = ShellRoute._addFileChildren(ShellRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ShellRoute: ShellRouteWithChildren,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   HowItWorksRoute: HowItWorksRoute,
