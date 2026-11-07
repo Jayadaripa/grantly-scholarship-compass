@@ -25,6 +25,7 @@ import { Route as ShellNavigatorRouteImport } from './routes/_shell.navigator'
 import { Route as ShellProfileRouteImport } from './routes/_shell.profile'
 import { Route as ShellSavedRouteImport } from './routes/_shell.saved'
 import { Route as ShellSettingsRouteImport } from './routes/_shell.settings'
+import { Route as ShellScholarshipIdRouteImport } from './routes/_shell.scholarship.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -105,6 +106,11 @@ const ShellSettingsRoute = ShellSettingsRouteImport.update({
   path: '/settings',
   getParentRoute: () => ShellRoute,
 } as any)
+const ShellScholarshipIdRoute = ShellScholarshipIdRouteImport.update({
+  id: '/scholarship/$id',
+  path: '/scholarship/$id',
+  getParentRoute: () => ShellRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -122,6 +128,7 @@ export interface FileRoutesByFullPath {
   '/profile': typeof ShellProfileRoute
   '/saved': typeof ShellSavedRoute
   '/settings': typeof ShellSettingsRoute
+  '/scholarship/$id': typeof ShellScholarshipIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -139,6 +146,7 @@ export interface FileRoutesByTo {
   '/profile': typeof ShellProfileRoute
   '/saved': typeof ShellSavedRoute
   '/settings': typeof ShellSettingsRoute
+  '/scholarship/$id': typeof ShellScholarshipIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -158,6 +166,7 @@ export interface FileRoutesById {
   '/_shell/profile': typeof ShellProfileRoute
   '/_shell/saved': typeof ShellSavedRoute
   '/_shell/settings': typeof ShellSettingsRoute
+  '/_shell/scholarship/$id': typeof ShellScholarshipIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -177,6 +186,7 @@ export interface FileRouteTypes {
     | '/profile'
     | '/saved'
     | '/settings'
+    | '/scholarship/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -194,6 +204,7 @@ export interface FileRouteTypes {
     | '/profile'
     | '/saved'
     | '/settings'
+    | '/scholarship/$id'
   id:
     | '__root__'
     | '/'
@@ -212,6 +223,7 @@ export interface FileRouteTypes {
     | '/_shell/profile'
     | '/_shell/saved'
     | '/_shell/settings'
+    | '/_shell/scholarship/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -339,6 +351,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ShellSettingsRouteImport
       parentRoute: typeof ShellRoute
     }
+    '/_shell/scholarship/$id': {
+      id: '/_shell/scholarship/$id'
+      path: '/scholarship/$id'
+      fullPath: '/scholarship/$id'
+      preLoaderRoute: typeof ShellScholarshipIdRouteImport
+      parentRoute: typeof ShellRoute
+    }
   }
 }
 
@@ -351,6 +370,7 @@ interface ShellRouteChildren {
   ShellProfileRoute: typeof ShellProfileRoute
   ShellSavedRoute: typeof ShellSavedRoute
   ShellSettingsRoute: typeof ShellSettingsRoute
+  ShellScholarshipIdRoute: typeof ShellScholarshipIdRoute
 }
 
 const ShellRouteChildren: ShellRouteChildren = {
@@ -362,6 +382,7 @@ const ShellRouteChildren: ShellRouteChildren = {
   ShellProfileRoute: ShellProfileRoute,
   ShellSavedRoute: ShellSavedRoute,
   ShellSettingsRoute: ShellSettingsRoute,
+  ShellScholarshipIdRoute: ShellScholarshipIdRoute,
 }
 
 const ShellRouteWithChildren = ShellRoute._addFileChildren(ShellRouteChildren)
