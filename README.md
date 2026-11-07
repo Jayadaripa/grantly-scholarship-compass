@@ -71,23 +71,8 @@ A clean and accessible interface designed for desktop, tablet, and mobile device
 
 ---
 
-## 🖥️ Application Preview
 
-<!-- Add your actual screenshots here after uploading them to GitHub -->
 
-<!--
-<p align="center">
-  <img src="docs/screenshots/homepage.png" width="85%" alt="GRANTLY Homepage"/>
-</p>
-
-<p align="center">
-  <img src="docs/screenshots/scholarship-matching.png" width="85%" alt="Scholarship Matching"/>
-</p>
--->
-
-> Screenshots of the landing page, scholarship matching interface, and dashboard can be added here to showcase the application visually.
-
----
 
 ## 🧭 How It Works
 
